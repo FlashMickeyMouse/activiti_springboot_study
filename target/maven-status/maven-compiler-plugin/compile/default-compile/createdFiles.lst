@@ -1,0 +1,12 @@
+com/zjialin/workflow/controller/DeployController.class
+com/zjialin/workflow/activiti/StencilsetRestResource.class
+com/zjialin/workflow/Application.class
+com/zjialin/workflow/activiti/ModelEditorJsonRestResource.class
+com/zjialin/workflow/activiti/ModelSaveRestResource.class
+com/zjialin/workflow/controller/TaskController.class
+com/zjialin/workflow/controller/StartController.class
+com/zjialin/workflow/config/SecurityConfig.class
+com/zjialin/workflow/controller/BaseController.class
+com/zjialin/workflow/utils/RestMessage.class
+com/zjialin/workflow/config/SwaggerConfig.class
+com/zjialin/workflow/activiti/ActivitiCreateRestResource.class
