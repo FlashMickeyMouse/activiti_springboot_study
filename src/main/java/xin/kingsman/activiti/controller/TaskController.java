@@ -1,5 +1,6 @@
 package xin.kingsman.activiti.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import xin.kingsman.activiti.utils.RestMessage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -71,15 +72,15 @@ public class TaskController extends BaseController {
     @ApiOperation(value = "完成任务", notes = "完成任务，任务进入下一个节点")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "taskId", value = "任务ID", dataType = "String", paramType = "query"),
-            @ApiImplicitParam(name = "variables", value = "填充参数", dataType = "body", paramType = "query"),
+            @ApiImplicitParam(name = "variables", value = "填充参数", dataType = "body", paramType = "body"),
     })
-    public RestMessage completeTask(@RequestParam("taskId") String taskId, Map<String, Object> variables) {
+    public RestMessage completeTask(@RequestParam("taskId") String taskId,@RequestBody Map<String, Object> variables) {
 
         RestMessage restMessage = new RestMessage();
 
         try {
             taskService.complete(taskId, variables);
-            restMessage = RestMessage.fail("完成任务成功", taskId);
+            restMessage = RestMessage.success("完成任务成功", taskId);
         } catch (Exception e) {
             restMessage = RestMessage.fail("完成任务失败", e.getMessage());
             log.error("完成任务,异常:{}", e);

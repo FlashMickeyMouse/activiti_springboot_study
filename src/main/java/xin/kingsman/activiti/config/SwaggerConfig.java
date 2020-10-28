@@ -24,16 +24,16 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())
                 // 是否开启
                 .enable(swaggerEnabled).select()
-                .apis(RequestHandlerSelectors.basePackage("com.zjialin.workflow.controller"))
+                .apis(RequestHandlerSelectors.basePackage("xin.kingsman.activiti.controller"))
                 .paths(PathSelectors.any()).build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Activiti7-工作流API")
-                .description("xugj | 高效码农")
+                .description("打工人")
                 // 作者信息
-                .contact(new Contact("zjialin", "https://github.com/zjialin/SpringBoot2-Activiti7", "zjialin@outlook.com"))
+                .contact(new Contact("sh", "https://github.com/FlashMickeyMouse/activiti_springboot_study", "sh_hq_123@163.com"))
                 .version("1.0.0")
                 .build();
     }
