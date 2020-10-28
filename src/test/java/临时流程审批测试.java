@@ -1,8 +1,8 @@
 import com.test.pojo.ApproveVO;
-import com.zjialin.workflow.Application;
-import com.zjialin.workflow.pojo.ApprovelinkVO;
-import com.zjialin.workflow.pojo.WholeTaskIdentitylink;
-import com.zjialin.workflow.service.impl.NormalContractActivitiBusinessService;
+import xin.kingsman.activiti.Application;
+import xin.kingsman.activiti.pojo.ApprovelinkVO;
+import xin.kingsman.activiti.pojo.WholeTaskIdentitylink;
+import xin.kingsman.activiti.service.impl.NormalContractActivitiBusinessService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.activiti.api.process.runtime.ProcessAdminRuntime;

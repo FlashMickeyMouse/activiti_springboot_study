@@ -1,7 +1,11 @@
+import xin.kingsman.activiti.Application;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.Deployment;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,9 +13,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 
-//
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = Application.class)
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class)
 public class TestCreate {
     @Autowired
     public RepositoryService repositoryService;
